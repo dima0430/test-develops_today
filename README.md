@@ -1,3 +1,4 @@
+# Deploy: https://test-develops-today-mu.vercel.app
 ## npm create-next-app test --ts
 ## npm i axios
 ## npm i redux react-redux redux-thunk @types/react-redux next-redux-wrapper@6.0.2
