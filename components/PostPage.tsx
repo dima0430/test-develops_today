@@ -2,8 +2,6 @@ import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { IComment, IPost, IPostProps } from '../types/posts'
 import PostItem from './PostItem'
 import { WrapperComments, Form, Input, Button, Comment } from '../styles/postPage'
-import { useActions } from '../hooks/useActions'
-import { useTypedSelector } from '../hooks/useTypedSelector'
 import axios from 'axios'
 
 const PostPage:React.FC<IPostProps> = ({post}) => {
@@ -29,7 +27,7 @@ const PostPage:React.FC<IPostProps> = ({post}) => {
             <PostItem post={post}/>
             <WrapperComments>
                 <Form onSubmit={onSubmit}>
-                    <Input onChange={onChange} value={comment} type="text" />
+                    <Input onChange={onChange} value={comment} required type="text" />
                     <Button>Add comment</Button>
                 </Form>
                     {comments &&
